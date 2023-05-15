@@ -66,7 +66,7 @@ nav ul li a:hover::after{
 /*------------------------------------------------------------ABOUT------------------------------------------------------------------------------------*/
 #about{
     padding: 80px 0;
-    color: #ababab;
+    color: aliceblue;
 }
 .row{
     display: flex;
@@ -88,4 +88,36 @@ nav ul li a:hover::after{
     font-size: 60px;
     font-weight: 600;
     color: white
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f1c40f;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0; 
+}
+.tab-contents ul li span{
+    font-size: 18px;
+    color: #b54769;
 }
