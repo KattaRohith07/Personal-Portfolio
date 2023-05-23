@@ -14,14 +14,14 @@
             <img src="./images/Free_Sample_By_Wix-removebg-preview.png" class="logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <div class="header-text">
-            <p>WEB DEVELOPER</p>
+            <p><h2>STUDENT</h2></p>
             <h1>Hi, I'm <span>Katta Rohith</span> </h1>
         </div>
     </div>
@@ -37,21 +37,60 @@
                 <p>As a highly motivated and detail-oriented individual, I am seeking an opportunity to work in a dynamic, fast-paced, and challenging environment where I can apply my academic knowledge, develop my professional skills, and make a meaningful contribution to the success of the organization. I am passionate about continuous learning, and I am eager to take on new challenges and grow professionally within a supportive and innovative workplace culture.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Front-End development.</span><br>Designing web interface.</li>
-                            <li><span>Python.</span><br>Coding.</li>
-                            <li><span>Java.</span><br>Coding.</li>
+                            <li><span>HTML</span><br>Developing web interface</li>
+                            <li><span>Python</span><br>Problem Solving</li>
+                            <li><span>Java</span><br>Problem Solving</li>
+                            <li><span>CSS</span><br>Designing web interface</li>
+                            <li><span>C Programming</span><br>Problem Solving</li>
+                            <li><span>Javascript</span><br>Making web pages reactive</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>OCT 2022-DEC 2022</span><br>WEB DEVELOPER at WorInWell</li>
+                            <li><span>APR 2023-MAY 2023</span><br>TECHNICAL CONTENT WRITER at Creator's Lab</li>
+                            <li><span>MAY 2023-Present</span><br>WEB DEVELOPMENT AND DESIGNING at Oasis Infobyte</li>                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>BE COMPUTER SCIENCE AND ENGINEERING<br>ST JOSEPH'S INSTITUTE OF TECHNOLOGY <BR>CHENNAI-600119</li>
+                            <li><span>2019-2021</span><br>HIGHER SECONDARY IN MPC<br>SRI CHAITANYA JUNIOR COLLEGE <BR>TIRUPATI-517501</BR></li>
+                            <li><span>2019</span><br>SECONDARY <BR>SILVER BELLS CENTRAL SCHOOL <BR>TIRUPATI-517501</BR></li>
                         </ul>
                     </div>
             </div>
         </div>
     </div>
 </div>
-    
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) { // Added event parameter
+        for (var i = 0; i < tablinks.length; i++) { // Used regular for loop
+            tablinks[i].classList.remove("active-link");
+        }
+        for (var i = 0; i < tabcontents.length; i++) { // Used regular for loop
+            tabcontents[i].classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
 </body>
 </html>
