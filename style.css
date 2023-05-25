@@ -338,6 +338,8 @@ nav .fa-regular{
         display: block;
         font-size: 25px;
         color: white;
+        margin-top: -250px;
+        margin-left: 20px;
     }
     nav ul{
         background: #ff004f;
@@ -365,6 +367,7 @@ nav .fa-regular{
         top: 25px;
         left: 25px;
         cursor: pointer;
+        margin-top: -200px;
     }
     .sub-title{
         font-size: 40px;
