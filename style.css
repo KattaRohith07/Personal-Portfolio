@@ -313,7 +313,9 @@ form.btn2{
 /*-------------------------css for small screen----------------------*/
 
 nav .fa-solid{
-    color: #ff004f;
+    display: none;
+}
+nav .fa-regular{
     display: none;
 }
 @media only screen and (max-width:600px){
@@ -332,11 +334,16 @@ nav .fa-solid{
         display: block;
         font-size: 25px;
     }
+    nav .fa-regular{
+        display: block;
+        font-size: 25px;
+        color: white;
+    }
     nav ul{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top:50px;
@@ -348,6 +355,12 @@ nav .fa-solid{
         margin: 25px;
     }
     nav ul.fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    nav ul.fa-regular{
         position: absolute;
         top: 25px;
         left: 25px;
