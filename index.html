@@ -19,7 +19,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                <i class="fa-regular fa-x" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
@@ -181,17 +181,19 @@
     }
 </script>
 
-
 <script>
-    // JavaScript code
     var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
+
+function openmenu() {
+  sidemenu.classList.add("open");
+}
+
+function closemenu() {
+  sidemenu.classList.remove("open");
+}
 </script>
+
+
 
 
 <script>

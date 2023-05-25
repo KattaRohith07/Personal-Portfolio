@@ -380,4 +380,20 @@ nav .fa-solid{
         margin-top: -40px;
         display: block;
     }
+    #sidemenu {
+        position: fixed;
+        top: 0;
+        right: -200px; /* Initially hide the menu off-screen */
+        width: 200px;
+        height: 100vh;
+        background-color: #f1f1f1;
+        transition: right 0.3s ease;
+      }
+      
+      #sidemenu.open {
+        right: 0; /* Show the menu by moving it to the right */
+      }
+      
+      /* Add additional styles as per your requirements */
+      
 }
