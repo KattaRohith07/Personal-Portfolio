@@ -226,6 +226,7 @@ nav ul li a:hover::after{
 }
 .work:hover img{
     transform: scale(1.1);
+    transition: 0.5s;
 }
 .work:hover .layer{
     height: 100%;
