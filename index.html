@@ -20,6 +20,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li onclick="toggleTheme()" style="cursor: pointer; font-size: 16px;font-weight: bold;color: white;">Theme</li>
                 <i class="fa-regular fa-x" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -221,5 +222,11 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+    function toggleTheme() {
+        var body = document.body;
+        body.classList.toggle("dark-theme");
+    }
+</script>
 </body>
 </html>
