@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rohith's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/letter-r.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c6920433d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,6 +20,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li onclick="toggleTheme()" style="cursor: pointer; font-size: 16px;font-weight: bold;color: white;">Theme</li>
                 <i class="fa-regular fa-x" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -55,6 +57,8 @@
                                 </span><br>23/2/2023-26/2/2023</li>
                             <li><span>FINALIST OF CONOCITHON 2.0 conducted by IEEE Madras Young Professionals
                             </span><br>12/3/2023</li>
+                            <li><span>Awarded with the Best Project in the HACKATHON HACKTOPIA conducted by GURUNANAK INSTITUTIONS,HYDERABAD
+                            </span><br>26/8/2023</li>
                         </ul>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
@@ -76,7 +80,7 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2021-2025</span><br>BE COMPUTER SCIENCE AND ENGINEERING<br>ST JOSEPH'S INSTITUTE OF TECHNOLOGY <BR>CHENNAI-600119</li>
+                            <li><span>2021-Present</span><br>BE COMPUTER SCIENCE AND ENGINEERING<br>ST JOSEPH'S INSTITUTE OF TECHNOLOGY <BR>CHENNAI-600119</li>
                             <li><span>2019-2021</span><br>HIGHER SECONDARY IN MPC<br>SRI CHAITANYA JUNIOR COLLEGE <BR>TIRUPATI-517501</BR></li>
                             <li><span>2019</span><br>SECONDARY <BR>SILVER BELLS CENTRAL SCHOOL <BR>TIRUPATI-517501</BR></li>
                         </ul>
@@ -135,7 +139,7 @@
                     <h3>Personal portfolio</h3>
                     <p>This is an official website of mine which contains all my details including my cv and developed using html,css,js.
                     </p>
-                    <a href="https://github.com/KattaRohith07/Datathon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/KattaRohith07/Personal-Portfolio"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
@@ -218,5 +222,11 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+    function toggleTheme() {
+        var body = document.body;
+        body.classList.toggle("dark-theme");
+    }
+</script>
 </body>
 </html>
