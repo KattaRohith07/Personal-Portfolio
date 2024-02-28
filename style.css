@@ -30,6 +30,7 @@ body {
     background-size:cover;
     background-position: center;
     
+    
 }
 .container{
     padding: 10px 10%;
@@ -39,10 +40,12 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    position: sticky;
-  z-index: 99;
-  top: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 5%;
 }
 .logo{
     width: 140px;
@@ -73,7 +76,7 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 40%;
     text-align: 30px;
 
 }
