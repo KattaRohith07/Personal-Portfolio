@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Display Example</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-gap: 10px; /* Gap between grid items */
+    background-color: #f3f3f3;
+    padding: 20px;
+  }
+  
+  .grid-item {
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .grid-item:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  .grid-item p:hover{
+    transform: scale(1.5);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item"><p>Item 1</p></div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+  <div class="grid-item">Item 6</div>
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+  <div class="grid-item">Item 6</div>
+  <div class="grid-item">Item 1</div>
+  <div class="grid-item">Item 2</div>
+  <div class="grid-item">Item 3</div>
+  <div class="grid-item">Item 4</div>
+  <div class="grid-item">Item 5</div>
+  <div class="grid-item">Item 6</div>
+</div>
+
+</body>
+</html>
