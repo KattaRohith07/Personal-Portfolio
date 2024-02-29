@@ -8,6 +8,85 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/letter-r.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/c6920433d0.js" crossorigin="anonymous"></script>
+    <style>
+        .container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.inputBox{
+    width: 100%;
+    /* margin: 10px; */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inputBox input[type="text"], .inputBox input[type="email"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.inputBox textarea{
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.inputBox button{
+    display: block;
+    border-radius: 10px;
+    background: #ff004f;
+    padding: 4%;
+    margin-left: 35%;
+    font-size: 13px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.alert{
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+    </style>
 </head>
 <body>
 <div id="header">
@@ -20,7 +99,6 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li onclick="toggleTheme()" style="cursor: pointer; font-size: 16px;font-weight: bold;color: white;">Theme</li>
                 <i class="fa-regular fa-x" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -139,7 +217,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/258490425/original/b2d02d7f91fa83cd76fe5683dbf74c22ebe9bebc/design-a-modern-or-futuristic-portfolio.png" alt="">
+                <img src="https://images.unsplash.com/photo-1556485689-33e55ab56127?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFpbmZhbGx8ZW58MHx8MHx8fDA%3D" alt="">
                 <div class="layer">
                     <h3>Personal portfolio</h3>
                     <p>This is an official website of mine which contains all my details including my cv and developed using html,css,js.
@@ -167,11 +245,24 @@
                 <a href="images/Rohith Resume new.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-rightt">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="name" placeholder="your name" required>
-                    <input type="email" name="email" placeholder="your email" required>
-                    <textarea name="message" rows="6" placeholder="your message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                <form action="/contact" id="contactForm">
+                    <div class="alert">Your message sent</div>
+        
+                    <div class="inputBox">
+                        <input type="text" id="name" placeholder="Your name...." />
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="email" id="emailid" placeholder="Your Email....." />
+                    </div>
+        
+                    <div class="inputBox">
+                        <textarea id="msgContent" cols="30" rows="20" placeholder="Message"></textarea>
+                    </div>
+        
+                    <div class="inputBox">
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </div>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -227,11 +318,5 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
-  <script>
-    function toggleTheme() {
-        var body = document.body;
-        body.classList.toggle("dark-theme");
-    }
-</script>
 </body>
 </html>
